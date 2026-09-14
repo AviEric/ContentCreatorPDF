@@ -23,11 +23,13 @@
   body{
     font-family: 'Manrope', sans-serif;
     background: var(--maroon-deep);
+    overflow-x: hidden;
   }
 
   .poster{
-    width: 1080px;
-    min-height: 1350px;
+    width: min(1080px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
     position: relative;
     background:
       radial-gradient(circle at 15% 8%, rgba(227,178,60,0.25), transparent 40%),
@@ -361,6 +363,155 @@
     background: var(--marigold);
     opacity: 0.6;
   }
+
+  @media (max-width: 900px){
+    .poster{
+      padding: 64px 7vw 54px;
+    }
+
+    h1.headline{
+      font-size: clamp(56px, 9vw, 76px);
+    }
+
+    .stage{
+      align-items: center;
+      flex-direction: column;
+      gap: 44px;
+    }
+
+    .price-block{
+      width: min(100%, 520px);
+      padding-bottom: 0;
+      text-align: center;
+    }
+
+    .price-row{
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-note{
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-strip{
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 600px){
+    .poster{
+      padding: 58px 22px 48px;
+    }
+
+    .eyebrow-row{
+      align-items: flex-start;
+      margin-bottom: 26px;
+    }
+
+    .festival-tag{
+      font-size: 12px;
+      padding: 9px 14px;
+    }
+
+    h1.headline{
+      font-size: clamp(44px, 14vw, 62px);
+    }
+
+    .subhead{
+      font-size: 16px;
+      margin-top: 18px;
+    }
+
+    .divider-row{
+      margin-top: 24px;
+      gap: 10px;
+    }
+
+    .divider-line{
+      width: 48px;
+    }
+
+    .divider-text{
+      font-size: 11px;
+    }
+
+    .stage{
+      margin-top: 42px;
+      gap: 36px;
+    }
+
+    .product-card{
+      width: min(330px, 100%);
+      height: auto;
+      min-height: 420px;
+      padding: 30px 24px;
+    }
+
+    .product-card h2{
+      font-size: 31px;
+    }
+
+    .stat-row{
+      gap: 6px;
+    }
+
+    .stat{
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+
+    .price-eyebrow{
+      font-size: 14px;
+    }
+
+    .price-row{
+      column-gap: 12px;
+      row-gap: 2px;
+    }
+
+    .old-price,
+    .mid-price{
+      font-size: 21px;
+    }
+
+    .new-price{
+      font-size: 78px;
+    }
+
+    .new-price .rupee{
+      font-size: 50px;
+    }
+
+    .unit{
+      font-size: 14px;
+    }
+
+    .cta{
+      width: 100%;
+      justify-content: center;
+      font-size: 17px;
+      padding: 16px 20px;
+    }
+
+    .footer-strip{
+      align-items: flex-start;
+      flex-direction: column;
+      margin-top: 48px;
+    }
+
+    .footer-strip .brand{
+      font-size: 12px;
+    }
+
+    .marigold-dots{
+      left: 22px;
+      bottom: 24px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -414,7 +565,7 @@
         <span class="new-price"><span class="rupee">₹</span>9</span>
         <span class="unit">/ one-time</span>
       </div>
-      <a class="cta" href="#">Grab It Now for ₹9</a>
+      <a class="cta" href="https://rzp.io/rzp/1Yphjwg">Grab It Now for ₹9</a>
       <div class="cta-note">Instant digital download · Lifetime access · Offer ends with the festival</div>
     </div>
   </div>
